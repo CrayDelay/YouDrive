@@ -1,0 +1,88 @@
+<div class="app-layout"
+     [ngClass.lt-md]="{'app-layout--show-header': true}">
+
+  <!-- BEGIN: MAIN SIDENAV CONTAINER -->
+  <youdrive-sidenav-container>
+
+    <!-- BEGIN: THEME SETTINGS BTN -->
+    <div class="app-theme-settings-btn"
+         (click)="onToggleThemeSettings()"
+         placement="left"
+         container="body"
+         ngbTooltip="Налаштування теми">
+      <youdrive-ibm-icon iconName="settingsAdjust" iconSize="24"></youdrive-ibm-icon>
+    </div>
+    <!-- END: THEME SETTINGS BTN -->
+
+    <!-- BEGIN: THEME SETTINGS SIDEBAR -->
+    <youdrive-sidenav
+      (close)="onCloseSettings($event)"
+      [opened]="settingsVisible"
+      [direction]="'right'"
+      [mode]="'over'"
+      [size]="'md'">
+      <youdrive-theme-settings></youdrive-theme-settings>
+    </youdrive-sidenav>
+    <!-- END: THEME SETTINGS SIDEBAR -->
+
+    <!-- BEGIN: MAIN HEADER (XS VIEW) -->
+    <app-main-header (menuClick)="onSideBarToggle($event)"
+                     (itemClick)="onMiniSidebarItemClick($event)"
+                     class="app-layout__header"></app-main-header>
+    <!-- BEGIN: END HEADER (XS VIEW) -->
+
+    <!-- BEGIN: MAIN MINI SIDEBAR (LEFT) -->
+    <div class="app-layout__mini-sidebar">
+      <div class="app-mini-sidebar">
+        <app-layout-mini-sidebar (itemClick)="onMiniSidebarItemClick($event)"></app-layout-mini-sidebar>
+      </div>
+    </div>
+    <!-- END: MAIN MINI SIDEBAR (LEFT) -->
+
+    <!-- BEGIN: MAIN LAYOUT -->
+    <div class="app-layout__content">
+      <youdrive-sidenav-container>
+
+        <!-- BEGIN: MAIN SIDEBAR -->
+        <youdrive-sidenav
+          [breakpoint]="mainSidebarOpts.breakpoint"
+          [opened]="mainSidebarOpts.opened"
+          [hoverAble]="mainSidebarOpts.hoverAble"
+          [mode]="mainSidebarOpts.mode"
+          [toggleableBtn]="mainSidebarOpts.toggleableBtn"
+          [size]="mainSidebarOpts.size"
+          (visibleChange)="onVisibilityChange($event)">
+          <app-layout-sidebar
+            [menu]="menu"
+            [opened]="mainSidebarOpts.opened"
+            (sideBarToggle)="onSideBarToggle($event)"></app-layout-sidebar>
+        </youdrive-sidenav>
+        <!-- END: MAIN SIDEBAR -->
+
+        <!-- BEGIN: MAIN PAGE CONTENT -->
+        <div class="app-layout__content__inner">
+          <router-outlet #outlet="outlet"></router-outlet>
+        </div>
+        <!-- END: MAIN PAGE CONTENT -->
+
+      </youdrive-sidenav-container>
+    </div>
+    <!-- END: MAIN LAYOUT -->
+
+  </youdrive-sidenav-container>
+
+  <!-- END: MAIN SIDENAV CONTAINER -->
+</div>
+
+<!-- BEGIN: GLOBAL SEARCH DIALOG -->
+<ng-container *ngIf="searchVisible">
+  <youdrive-search (close)="onSearchClose($event)"></youdrive-search>
+</ng-container>
+<!-- END: GLOBAL SEARCH DIALOG -->
+
+<!-- BEGIN: LOCK SCREEN DIALOG -->
+<ng-container *ngIf="lockScreenVisible">
+  <youdrive-lock-screen (close)="onLockClose($event)"></youdrive-lock-screen>
+</ng-container>
+<!-- END: LOCK SCREEN DIALOG -->
+

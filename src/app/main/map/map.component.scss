@@ -1,0 +1,265 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  min-height: 760px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 60px;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+.background-img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card {
+  position: relative;
+  border-radius: 12.385px;
+  box-shadow: 0px 20.642px 51.604px 0px rgba(220, 224, 249, 0.5);
+  border: 4px solid rgba(89, 50, 234, 1);
+  background-color: #fff;
+  display: flex;
+  width: 405px;
+  max-width: 100%;
+  flex-direction: column;
+  margin: 37px 0 0 47px;
+  padding: 26px 20px;
+}
+
+@media (max-width: 991px) {
+  .card {
+    margin-left: 10px;
+  }
+}
+
+.header {
+  display: flex;
+  gap: 20px;
+  padding: 0 1px;
+}
+
+.shipment-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: auto 0;
+}
+
+.label {
+  color: #b0b0b0;
+  letter-spacing: 0.14px;
+  font: 600 14px Cabin, sans-serif;
+}
+
+.shipment-number {
+  color: #232323;
+  letter-spacing: 0.19px;
+  margin-top: 10px;
+  font: 700 19px Product Sans, sans-serif;
+}
+
+.shipment-img {
+  aspect-ratio: 2.63;
+  object-fit: auto;
+  object-position: center;
+  width: 157px;
+  max-width: 100%;
+}
+
+.material-type {
+  color: #484a58;
+  letter-spacing: 0.14px;
+  margin-top: 6px;
+  font: 400 14px Product Sans, sans-serif;
+}
+
+.divider {
+  border: 1px solid rgba(236, 236, 236, 1);
+  background-color: #ececec;
+  margin-top: 23px;
+  height: 1px;
+}
+
+.route-info {
+  display: flex;
+  margin-top: 21px;
+  gap: 15px;
+}
+
+.route-step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.current-location {
+  background-color: #e8f9ee;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 39px;
+  height: 39px;
+  padding: 0 12px;
+}
+
+.current-location-marker {
+  background-color: #0ebc93;
+  border-radius: 50%;
+  height: 14px;
+}
+
+.route-line {
+  border: 2px dashed rgba(227, 227, 227, 1);
+  background-color: #e3e3e3;
+  width: 34px;
+  height: 24px;
+  margin: 4px 0 0 19px;
+}
+
+@media (max-width: 991px) {
+  .route-line {
+    margin-left: 10px;
+  }
+}
+
+.address {
+  align-self: flex-start;
+  display: flex;
+  margin-top: 5px;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 0;
+  width: fit-content;
+}
+
+.address-title {
+  color: #232323;
+  letter-spacing: 0.17px;
+  font: 700 17px Product Sans, sans-serif;
+}
+
+.address-body {
+  color: #b0b0b0;
+  letter-spacing: 0.12px;
+  margin-top: 8px;
+  font: 400 12px Cabin, sans-serif;
+}
+
+.destination-info {
+  display: flex;
+  gap: 15px;
+}
+
+.destination-img {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 39px;
+}
+
+.destination {
+  align-self: flex-start;
+  display: flex;
+  margin-top: 5px;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 0;
+  width: fit-content;
+}
+
+.destination-title {
+  color: #232323;
+  letter-spacing: 0.17px;
+  font: 700 17px Product Sans, sans-serif;
+}
+
+.destination-body {
+  color: #b0b0b0;
+  letter-spacing: 0.12px;
+  margin-top: 8px;
+  font: 400 12px Cabin, sans-serif;
+}
+
+.secondary-divider {
+  border: 1px solid rgba(236, 236, 236, 1);
+  background-color: #ececec;
+  margin-top: 20px;
+  height: 1px;
+}
+
+footer {
+  display: flex;
+  margin-top: 23px;
+  width: 100%;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+footer .client-info {
+  display: flex;
+  gap: 11px;
+  font-size: 14px;
+  letter-spacing: 0.14px;
+}
+
+footer .client-img {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 48px;
+  border-radius: 50%;
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+footer .client-details {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .client-label {
+  color: #b0b0b0;
+  font-family: Cabin, sans-serif;
+  font-weight: 600;
+}
+
+footer .client-name {
+  color: #232323;
+  letter-spacing: 0.17px;
+  margin-top: 8px;
+  font: 700 17px Product Sans, sans-serif;
+}
+
+footer .client-company {
+  color: #484a58;
+  font-family: Cabin, sans-serif;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+footer .social-icons {
+  display: flex;
+  gap: 19px;
+  margin: auto 0;
+}
+
+footer .social-icon {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 39px;
+}

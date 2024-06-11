@@ -1,0 +1,76 @@
+<youdrive-sidenav-container panel="panel">
+  <youdrive-sidenav
+    [breakpoint]="'md'"
+    [direction]="'right'"
+    [opened]="true"
+    [hoverAble]="true"
+    [mode]="'side'"
+    [toggleableBtn]="true"
+    initWidth="300">
+
+    <youdrive-sidenav-container panel="panel">
+      <youdrive-sidenav
+        [breakpoint]="'md'"
+        [direction]="'bottom'"
+        [opened]="true"
+        [hoverAble]="true"
+        [mode]="'side'"
+        [toggleableBtn]="true"
+        initWidth="500">
+        <div fxFill fxLayout="column" class="app-bg-container relative">
+          <div class="app-header app-header--sm">
+            <div class="app-expressive-heading-02">Split bottom</div>
+          </div>
+        </div>
+      </youdrive-sidenav>
+
+      <div fxFill fxLayout="column" class="app-bg-container relative">
+        <div class="app-header app-header--sm">
+          <div class="app-expressive-heading-02">Split top</div>
+        </div>
+        <div fxFlex class="relative">
+          <div class="app-a-box app-bg-container app-scrollbar-fix">
+            <ng-scrollbar>
+
+            </ng-scrollbar>
+          </div>
+        </div>
+      </div>
+
+    </youdrive-sidenav-container>
+  </youdrive-sidenav>
+
+  <youdrive-sidenav-container panel="panel">
+    <youdrive-sidenav
+      [breakpoint]="'md'"
+      [direction]="'bottom'"
+      [opened]="true"
+      [hoverAble]="true"
+      [mode]="'side'"
+      initWidth="370"
+      [toggleableBtn]="true"
+      [size]="'sideBar1'">
+      <div fxFill fxLayout="column" class="app-bg-container relative">
+        <div class="app-header app-header--sm">
+          <div class="app-expressive-heading-02">Bottom</div>
+        </div>
+      </div>
+    </youdrive-sidenav>
+
+    <div fxFill fxLayout="column" class="relative">
+      <youdrive-header [bordered]="true">
+        <youdrive-header-title>
+          Main header
+        </youdrive-header-title>
+        <youdrive-header-tools>
+          <button ibmButton="primary" size="sm" class="mr-1">
+            Button
+            <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
+          </button>
+        </youdrive-header-tools>
+      </youdrive-header>
+    </div>
+  </youdrive-sidenav-container>
+
+</youdrive-sidenav-container>
+
