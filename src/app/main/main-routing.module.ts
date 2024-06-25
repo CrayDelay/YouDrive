@@ -199,8 +199,9 @@ const routeForPages = [
   },
   {
     path: 'map',
+    component: MapComponent,
     data:{
-      breadcrumb: 'map'
+      breadcrumb: 'Map'
     }
   },
   {

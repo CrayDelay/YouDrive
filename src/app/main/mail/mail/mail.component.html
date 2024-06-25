@@ -1,11 +1,11 @@
 <div fxFill fxLayout="column">
   <youdrive-header>
     <youdrive-header-title>
-      Mailbox
+      Поштова скринька
     </youdrive-header-title>
     <youdrive-header-tools>
       <button (click)="onCompose()" ibmButton="primary" size="sm">
-        Compose
+        Написати
         <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
       </button>
     </youdrive-header-tools>
@@ -27,7 +27,7 @@
 
             <div class="app-mini-sidebar-alt__list__item app-mini-sidebar-alt__list__item--active">
               <div class="app-mini-sidebar-alt__list__item__pill">
-                <div class="app-mini-sidebar-alt__list__item__pill__text">Inbox</div>
+                <div class="app-mini-sidebar-alt__list__item__pill__text">Вхідні</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
                   <youdrive-ibm-icon iconSize="24" iconName="package"></youdrive-ibm-icon>
                 </div>
@@ -36,7 +36,7 @@
 
             <div class="app-mini-sidebar-alt__list__item">
               <div class="app-mini-sidebar-alt__list__item__pill">
-                <div class="app-mini-sidebar-alt__list__item__pill__text">Starred</div>
+                <div class="app-mini-sidebar-alt__list__item__pill__text">Відзначені</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
                   <youdrive-ibm-icon iconSize="24" iconName="star"></youdrive-ibm-icon>
                 </div>
@@ -45,7 +45,7 @@
 
             <div class="app-mini-sidebar-alt__list__item">
               <div class="app-mini-sidebar-alt__list__item__pill">
-                <div class="app-mini-sidebar-alt__list__item__pill__text">Important</div>
+                <div class="app-mini-sidebar-alt__list__item__pill__text">Важливі</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
                   <youdrive-ibm-icon iconSize="24" iconName="alarm"></youdrive-ibm-icon>
                 </div>
@@ -54,7 +54,7 @@
 
             <div class="app-mini-sidebar-alt__list__item">
               <div class="app-mini-sidebar-alt__list__item__pill">
-                <div class="app-mini-sidebar-alt__list__item__pill__text">Sent</div>
+                <div class="app-mini-sidebar-alt__list__item__pill__text">Надіслані</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
                   <youdrive-ibm-icon iconSize="24" iconName="sendAlt"></youdrive-ibm-icon>
                 </div>
@@ -63,7 +63,7 @@
 
             <div class="app-mini-sidebar-alt__list__item">
               <div class="app-mini-sidebar-alt__list__item__pill">
-                <div class="app-mini-sidebar-alt__list__item__pill__text">Drafts</div>
+                <div class="app-mini-sidebar-alt__list__item__pill__text">Чернетки</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
                   <youdrive-ibm-icon iconSize="24" iconName="document"></youdrive-ibm-icon>
                 </div>
@@ -72,7 +72,7 @@
 
             <div class="app-mini-sidebar-alt__list__item">
               <div class="app-mini-sidebar-alt__list__item__pill">
-                <div class="app-mini-sidebar-alt__list__item__pill__text">Spam</div>
+                <div class="app-mini-sidebar-alt__list__item__pill__text">Спам</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
                   <youdrive-ibm-icon iconSize="24" iconName="error"></youdrive-ibm-icon>
                 </div>
@@ -81,7 +81,7 @@
 
             <div class="app-mini-sidebar-alt__list__item">
               <div class="app-mini-sidebar-alt__list__item__pill">
-                <div class="app-mini-sidebar-alt__list__item__pill__text">Trash</div>
+                <div class="app-mini-sidebar-alt__list__item__pill__text">Кошик</div>
                 <div class="app-mini-sidebar-alt__list__item__pill__icon">
                   <youdrive-ibm-icon iconSize="24" iconName="trashCan"></youdrive-ibm-icon>
                 </div>
@@ -94,13 +94,13 @@
         <div class="app-mini-sidebar-alt-holder">
           <div fxFill fxLayout="column" class="app-bg-container">
             <div class="app-header-subheader">
-              <div class="app-productive-heading-02 flex-1">Inbox</div>
+              <div class="app-productive-heading-02 flex-1">Вхідні</div>
               <div class="app-helper-text-01">
-                Sort: <span class="font-bold">date</span>
+                Сортувати: <span class="font-bold">дата</span>
               </div>
             </div>
             <div>
-              <ibm-search placeholder="Search..."
+              <ibm-search placeholder="Пошук..."
                           size="md"></ibm-search>
             </div>
             <div fxFlex class="relative">
@@ -165,7 +165,7 @@
               <div class="flex flex-1 items-center justify-between">
                 <div></div>
                 <div class="flex items-center">
-                  <div class="app-helper-text-01">1 - 10 of 1,451</div>
+                  <div class="app-helper-text-01">1 - 10 з 1,451</div>
                   <button
                     ibmButton="ghost" size="sm"
                     class="bx--btn--icon-only bx--btn--remove-tooltip">
@@ -225,7 +225,7 @@
                 </button>
               </div>
               <div class="flex-1 flex items-center justify-end" fxHide fxShow.gt-sm>
-                <div class="app-helper-text-01">1 of 1,451</div>
+                <div class="app-helper-text-01">1 з 1,451</div>
                 <button
                   ibmButton="ghost" size="sm"
                   class="bx--btn--icon-only bx--btn--remove-tooltip">
@@ -241,7 +241,7 @@
             <div class="app-header-subheader" style="height: 40px">
               <div class="flex justify-between flex-1 items-center">
                 <div class="app-productive-heading-02">{{selectedMail.title}}</div>
-                <ibm-tag type="warm-gray">work</ibm-tag>
+                <ibm-tag type="warm-gray">робота</ibm-tag>
               </div>
             </div>
             <div class="app-card app-card--alone">
@@ -256,11 +256,11 @@
                   <div class="flex-1 overflow-hidden truncate">
                     <div class="mb-1">
                       <span class="app-productive-heading-01 mr-2">{{selectedMail.sender}}</span>
-                      <span class="app-helper-text-01">jon@noice.com</span>
+                      <span class="app-helper-text-01">bohdan@noice.com</span>
                     </div>
                     <div class="app-helper-text-01">
-                      to <span class="font-bold">you</span>, <span class="font-bold">Jonathan</span>, <span
-                      class="font-bold">Joseph</span>
+                      до <span class="font-bold">вас</span>, <span class="font-bold">Богдан</span>, <span
+                      class="font-bold">Когутницький</span>
                     </div>
                   </div>
                   <div class="whitespace-no-wrap app-label-01 text-muted ml-1">
@@ -268,48 +268,29 @@
                   </div>
                 </div>
                 <p class="app-body-long-01">
-                  <span>Greetings Jackie,</span><br/><br/>
-                  Declarative: React makes it painless to create interactive UIs. Design simple views for each state in
-                  your
-                  application, and React will efficiently update and render just the right components when your data
-                  changes. Declarative views make your code more predictable, simpler to understand, and easier to
-                  debug.<br/><br/>
-                  Component-Based: Build encapsulated components that manage their own state, then compose them to make
-                  complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass
-                  rich
-                  data through your app and keep state out of the DOM.<br/>
-                  Learn Once, Write Anywhere: We don't make assumptions about the rest of your technology stack, so you
-                  can
-                  develop new features in React without rewriting existing code. React can also render on the server
-                  using
-                  Node and power mobile apps using React Native.<br/><br/>
-                  You'll notice that we used an HTML-like syntax; we call it JSX. JSX is not required to use React, but
-                  it
-                  makes code more readable, and writing it feels like writing HTML.<br/><br/>
-                  The main purpose of this repository is to continue evolving React core, making it faster and easier to
-                  use. Development of React happens in the open on GitHub, and we are grateful to the community for
-                  contributing bugfixes and improvements. Read below to learn how you can take part in improving
-                  React.<br/><br/>
-                  Sincerely yours,<br/>
-                  <span class="font-bold">React Team</span>
+                  <span>Привіт Богдан,</span><br/><br/>
+                 <br/><br/>
+                  <br/><br/>
+                  <br/><br/>
+                  З повагою,<br/>
+                  <span class="font-bold">Команда YouDrive</span>
                 </p>
                 <p class="app-helper-text-01 text-muted mt-4">
-                  The content of this email message - including any attachments to it - is confidential and considered
-                  to be
-                  business secret.<br/>
-                  Therefore it is prohibited to publish, distribute, share, copy it in any way. If you are not the
-                  recipient, you are not allowed to use or store the information in this email. If you have got this
-                  message
-                  by coincidence, please delete it immediately and notify the sender.
+                  Вміст цього листа електронної пошти - включаючи всі додатки до нього - є конфіденційним і вважається
+                  комерційною таємницею.<br/>
+                  Тому заборонено публікувати, поширювати, обмінюватися, копіювати будь-яким чином. Якщо ви не
+                  є отримувачем, ви не маєте права використовувати або зберігати інформацію у цьому листі
+                  електронної пошти. Якщо ви отримали це повідомлення випадково, будь ласка, негайно його
+                  видаліть та повідомте відправника.
                 </p>
                 <div class="mt-6">
-              <textarea
-                ibmTextArea
-                [placeholder]="'Type your reply here'"
-                class="app-border-all"
-                [rows]="5"
-                [cols]="5"
-                aria-label="textarea"></textarea>
+                  <textarea
+                    ibmTextArea
+                    [placeholder]="'Введіть свою відповідь тут'"
+                    class="app-border-all"
+                    [rows]="5"
+                    [cols]="5"
+                    aria-label="textarea"></textarea>
                   <div class="flex items-center mt-1">
                     <div class="flex-1 flex items-center">
                       <button
@@ -345,10 +326,10 @@
                       </button>
                     </div>
                     <button ibmButton="ghost" size="sm">
-                      Discard
+                      Скасувати
                     </button>
                     <button ibmButton="primary" size="sm">
-                      Send
+                      Відправити
                       <svg class="bx--btn__icon" ibmIconSend size="20"></svg>
                     </button>
                   </div>

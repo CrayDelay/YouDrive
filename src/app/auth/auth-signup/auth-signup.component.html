@@ -1,10 +1,10 @@
 <div class="mb-8" fxHide fxShow.lt-md>
   <youdrive-logo class="cursor-pointer" logoWidth="130px"></youdrive-logo>
 </div>
-<h1 class="app-expressive-heading-06 mb-1">Sign up</h1>
+<h1 class="app-expressive-heading-06 mb-1">Зареєструватися</h1>
 <div class="app-body-long-02 mb-8">
-  Already have an account?
-  <a ibmLink routerLink="../signin">Sign in</a>
+  Вже маєте аккаунт?
+  <a ibmLink routerLink="../signin">Увійти</a>
 </div>
 <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
   <div class="app-form">
@@ -14,8 +14,8 @@
           <ibm-label
             [helperText]="''"
             [invalid]="isValid('firstName')"
-            [invalidText]="'This field is required'">
-            First name
+            [invalidText]="'Це поле є обов`язковим'">
+            Ім'я
             <input
               formControlName="firstName"
               ibmText
@@ -23,7 +23,7 @@
               [invalid]="isValid('firstName')"
               [disabled]="false"
               theme="light"
-              [placeholder]="'First name'"
+              [placeholder]="'Ім`я'"
               [autocomplete]="true">
           </ibm-label>
         </div>
@@ -33,8 +33,8 @@
           <ibm-label
             [helperText]="''"
             [invalid]="isValid('lastName')"
-            [invalidText]="'This field is required'">
-            Last name
+            [invalidText]="'Це поле є обов`язковим'">
+            Прізвище
             <input
               formControlName="lastName"
               ibmText
@@ -42,7 +42,7 @@
               [invalid]="isValid('lastName')"
               [disabled]="false"
               theme="light"
-              [placeholder]="'Last name'"
+              [placeholder]="'Прізвище'"
               [autocomplete]="true">
           </ibm-label>
         </div>
@@ -52,8 +52,8 @@
       <ibm-label
         [helperText]="''"
         [invalid]="isValid('email')"
-        [invalidText]="'This field is required'">
-        Email address
+        [invalidText]="'Це поле є обов`язковим'">
+        Електронна адреса
         <input
           formControlName="email"
           ibmText
@@ -61,7 +61,7 @@
           [invalid]="isValid('email')"
           [disabled]="false"
           theme="light"
-          [placeholder]="'Email address'"
+          [placeholder]="'Електронна адреса'"
           [autocomplete]="true">
       </ibm-label>
     </div>
@@ -69,8 +69,8 @@
       <ibm-label
         [helperText]="''"
         [invalid]="isValid('company')"
-        [invalidText]="'This field is required'">
-        Company
+        [invalidText]="'Це поле є обов`язковим'">
+        Компанія
         <input
           formControlName="company"
           ibmText
@@ -78,21 +78,21 @@
           [invalid]="isValid('company')"
           [disabled]="false"
           theme="light"
-          [placeholder]="'Company'"
+          [placeholder]="'Компанія'"
           [autocomplete]="true">
       </ibm-label>
     </div>
     <div class="app-form__item app-form__item--opts">
       <div class="flex justify-between items-center">
         <ibm-checkbox formControlName="condition">
-          I have read and accept
-          <a class="app-link">terms & conditions</a>
+          Я прочитав та приймаю
+          <a class="app-link">Умови & Положення</a>
         </ibm-checkbox>
       </div>
     </div>
     <div class="app-form__submit">
       <button type="submit" class="app-ibm-btn-full" ibmButton="primary" size="field">
-        Create your account
+        Створити аккаунт
         <svg class="bx--btn__icon" ibmIconArrowRight size="20"></svg>
       </button>
     </div>

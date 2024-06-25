@@ -1,11 +1,11 @@
 <div fxFill fxLayout="column">
   <youdrive-header>
     <youdrive-header-title>
-      The company tasks
+      Всі завдання
     </youdrive-header-title>
     <youdrive-header-tools>
       <button ibmButton="primary" size="sm">
-        Synchronise
+        Синхронізувати
         <svg class="bx--btn__icon" ibmIconCheckmarkOutline size="20"></svg>
       </button>
     </youdrive-header-tools>
@@ -28,8 +28,8 @@
             </div>
             <div class="mr-4">
               <div>
-                <div class="app-helper-text-01">david@youdrive.com</div>
-                <div class="app-expressive-heading-02">David Robson</div>
+                <div class="app-helper-text-01">bohdan@youdrive.com</div>
+                <div class="app-expressive-heading-02">Богдан Когутницький</div>
               </div>
             </div>
           </div>
@@ -38,7 +38,7 @@
             <div class="app-a-box app-scrollbar-fix">
               <ng-scrollbar>
                 <div class="mt-2">
-                  <div class="app-list-header-pill">TAGS</div>
+                  <div class="app-list-header-pill">МІТКИ</div>
                   <div class="app-list-pill">
                     <ng-container *ngFor="let tag of tags">
                       <div class="app-list-pill__item">
@@ -52,7 +52,7 @@
                   </div>
                 </div>
                 <div class="mt-2">
-                  <div class="app-list-header-pill">TEAM MEMBERS</div>
+                  <div class="app-list-header-pill">Команда</div>
                   <div class="app-list-pill">
                     <ng-container *ngFor="let user of users">
                       <div class="app-list-pill__item">
@@ -65,7 +65,7 @@
                   </div>
                 </div>
                 <div class="mt-2">
-                  <div class="app-list-header-pill">ARCHIVES</div>
+                  <div class="app-list-header-pill">Архів</div>
                   <div class="app-list-pill">
                     <ng-container *ngFor="let archive of archives">
                       <div class="app-list-pill__item">
@@ -95,7 +95,7 @@
                         <svg class="bx--btn__icon" ibmIconOpenPanelLeft size="20"></svg>
                       </button>
                       <button (click)="onAddList()" ibmButton="primary" size="sm">
-                        Add list
+                        Додати список
                         <svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
                       </button>
                       <div class="ml-2" style="width:150px">

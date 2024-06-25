@@ -9,136 +9,139 @@ export class FileManagerComponent implements OnInit {
 
   public folders = [
     {
-      name: 'photos',
+      name: 'Контракти',
       files: 10,
       size: '2.2GB'
     },
     {
-      name: 'draws',
+      name: 'Страховки',
       files: 2,
       size: '0.2GB'
     },
     {
-      name: 'Schema docs',
+      name: 'Паспортні дані',
       files: 15,
       size: '0.1GB'
     },
     {
-      name: 'Cluster configs',
+      name: 'Фінансові звіти',
       files: 1,
       size: '1MB'
     }
-  ]
+  ];
+
   public files = [
     {
-      name: 'SUPPORT.md',
-      accessed: '5 mins ago',
+      name: 'Договір_оренди.pdf',
+      accessed: '5 хвилин тому',
       size: '2KB',
     },
     {
-      name: 'repos_generated.bzl',
-      accessed: '1 hour ago',
+      name: 'Страховка_авто.pdf',
+      accessed: '1 годину тому',
       size: '16KB',
     },
     {
-      name: 'import-restrictions.yaml',
-      accessed: '6 hours ago',
+      name: 'Паспорт_водія.pdf',
+      accessed: '6 годин тому',
       size: '101KB',
     },
     {
-      name: 'build-cross.sh',
-      accessed: '10 days ago',
+      name: 'Фінзвіт_2023.xlsx',
+      accessed: '10 днів тому',
       size: '1MB',
     },
     {
-      name: 'infrastructure.svg',
-      accessed: '1 month ago',
+      name: 'Дозвіл_на_роботу.pdf',
+      accessed: '1 місяць тому',
       size: '178MB',
     },
     {
-      name: 'packages.json',
-      accessed: '4 months ago',
+      name: 'Реєстрація_авто.pdf',
+      accessed: '4 місяці тому',
       size: '13KB',
     }
-  ]
+  ];
+
   public filesMore = [
     {
-      name: 'README.md',
-      accessed: '5 mins ago',
+      name: 'Інструкція_для_водіїв.pdf',
+      accessed: '5 хвилин тому',
       size: '2.2GB',
     },
     {
-      name: 'tools.go',
-      accessed: '5 mins ago',
+      name: 'Графік_змін.xlsx',
+      accessed: '5 хвилин тому',
       size: '0.2GB',
     },
     {
-      name: 'meetings.xls',
-      accessed: '5 mins ago',
+      name: 'Звіт_зустрічей.xls',
+      accessed: '5 хвилин тому',
       size: '0.1GB',
     },
     {
-      name: 'Schema-map.doc',
-      accessed: '5 mins ago',
+      name: 'Карта_схем.doc',
+      accessed: '5 хвилин тому',
       size: '1MB',
     },
     {
-      name: 'nice-girls-secret.jpg',
-      accessed: '5 mins ago',
+      name: 'Фото_авто.jpg',
+      accessed: '5 хвилин тому',
       size: '1MB',
     },
     {
-      name: 'Webdesign.xlsx',
-      accessed: '5 mins ago',
+      name: 'Дизайн_сайту.xlsx',
+      accessed: '5 хвилин тому',
       size: '0.01MB',
     },
     {
-      name: 'last-Design.psd',
-      accessed: '5 mins ago',
+      name: 'Останній_дизайн.psd',
+      accessed: '5 хвилин тому',
       size: '0.01MB',
     },
     {
-      name: 'build.yaml',
-      accessed: '5 mins ago',
+      name: 'Збірка.yaml',
+      accessed: '5 хвилин тому',
       size: '0.01MB',
     },
     {
-      name: 'kubernetes-links.docs',
-      accessed: '5 mins ago',
+      name: 'Посилання_на_документи.docs',
+      accessed: '5 хвилин тому',
       size: '0.01MB',
     },
+    {
+      name: 'Провайдери.go',
+      accessed: '5 хвилин тому',
+      size: '0.01MB',
+    },
+    {
+      name: 'Магазин_даних.ts',
+      accessed: '5 хвилин тому',
+      size: '0.01MB',
+    },
+    {
+      name: 'Більше_документів.xlsx',
+      accessed: '5 хвилин тому',
+      size: '0.01MB',
+    },
+    {
+      name: 'Фото_авто.jpg',
+      accessed: '5 хвилин тому',
+      size: '1MB',
+    },
+    {
+      name: 'Дизайн_сайту.xlsx',
+      accessed: '5 хвилин тому',
+      size: '0.01MB',
+    }
+  ];
 
-    {
-      name: 'providers.go',
-      accessed: '5 mins ago',
-      size: '0.01MB',
-    },
-    {
-      name: 'ngrx-store.ts',
-      accessed: '5 mins ago',
-      size: '0.01MB',
-    },
-    {
-      name: 'more-docs.xlsx',
-      accessed: '5 mins ago',
-      size: '0.01MB',
-    },
-    {
-      name: 'nice-girls-secret.jpg',
-      accessed: '5 mins ago',
-      size: '1MB',
-    },
-    {
-      name: 'Webdesign.xlsx',
-      accessed: '5 mins ago',
-      size: '0.01MB',
-    },
-  ]
   public selectedItem = {
-    name: 'import-restrictions.yaml',
-    accessed: '5 mins ago',
+    name: 'Паспорт_водія.pdf',
+    accessed: '5 хвилин тому',
     size: '0.1GB',
-  }
+  };
+
   public isDetailsOpened: boolean = false
   public leftSidebarVisibility: boolean = true
 
